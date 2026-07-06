@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Audia Disco — Tienda de música en La Paz. Vinilos, CDs, tocadiscos, parlantes y accesorios con ofertas exclusivas. Visítanos en Calle Litoral.">
+    <meta name="theme-color" content="#D4820A">
+    <title>Audia Disco | Tienda de Vinilos y Equipos de Audio</title>
+    
+    <!-- Fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 🎵 REPRODUCTOR DE AUDIO -->
+    <div class="audio-player" id="audioPlayer">
+        <div class="audio-inner">
+            <div class="vinyl-disc" id="vinylDisc"></div>
+            <div class="audio-info">
+                <div class="audio-title" id="audioTitle">Bienvenido a Audia Disco</div>
+                <div class="audio-artist" id="audioArtist">Sonido Analógico Premium</div>
+            </div>
+            <input type="range" class="audio-progress" id="audioProgress" min="0" max="100" value="0">
+            <div class="audio-controls">
+                <button class="audio-btn" id="audioPrev" title="Anterior">⏮</button>
+                <button class="audio-btn" id="audioPlayPause" title="Reproducir/Pausar">▶</button>
+                <button class="audio-btn" id="audioNext" title="Siguiente">⏭</button>
+            </div>
+            <div class="audio-volume">
+                <button class="audio-btn audio-mute" id="audioMute" title="Silenciar">🔊</button>
+                <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="70">
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER PRINCIPAL -->
+    <header id="mainHeader">
+        <div class="header-top">
+            📍 Calle Litoral entre Belzu y Pasaje Scouts &nbsp;|&nbsp;
+            <a href="mailto:info@audiadisco.com?subject=Consulta%20Audia%20Disco&body=Hola%20Audia%20Disco!">📧 Gmail: info@audiadisco.com</a> &nbsp;|&nbsp;
+            <a href="https://wa.me/59176975874" style="font-weight:700;">📞 WhatsApp: 76975874</a> &nbsp;|&nbsp;
+            🔥 OFERTAS EXCLUSIVAS HASTA -30% 🔥
+        </div>
+        <div class="header-main">
+            <div class="logo">
+                <span class="logo-main">AUDIA DISCO</span>
+                <span class="logo-sub">Alta Fidelidad & Vinilos</span>
+            </div>
+            <nav class="header-nav">
+                <a href="#" class="nav-cat active" data-filter="all">Todo</a>
+                <a href="#" class="nav-cat" data-filter="vinilo">🎵 Vinilos</a>
+                <a href="#" class="nav-cat" data-filter="cd">💿 CDs</a>
+                <a href="#" class="nav-cat" data-filter="casette">📼 Casettes</a>
+                <a href="#" class="nav-cat" data-filter="tocadisco">🎚️ Tocadiscos</a>
+                <a href="#" class="nav-cat" data-filter="parlante">🔊 Parlantes</a>
+                <a href="#" class="nav-cat" data-filter="amplificador">⚡ Amplificadores</a>
+                <a href="#" class="nav-cat" data-filter="accesorio">🪡 Accesorios</a>
+            </nav>
+        </div>
+        <button class="collapse-header-btn" id="collapseHeaderBtn" title="Ocultar/Mostrar menú">
+            <span class="arrow">▼</span>
+        </button>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="vinyl-spin"></div>
+        <div class="hero-content">
+            <div class="hero-tag">🎶 SONIDO ANALÓGICO · NUEVOS LLEGADOS Y OFERTAS 🎶</div>
+            <h1 class="hero-title">AUDIA <em>disco</em></h1>
+            <p class="hero-desc">Vinilos exclusivos, tocadiscos de alta gama y los mejores accesorios. Vive la experiencia analógica con precios irresistibles.</p>
+            <div class="hero-stats">
+                <div><span>250+</span><div>VINILOS</div></div>
+                <div><span>24/7</span><div>OFERTAS</div></div>
+                <div><span>📍 Litoral</span><div>TIENDA FÍSICA</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UBICACIÓN + MAPA -->
+    <section class="location-showcase">
+        <div class="location-container">
+            <div class="location-info">
+                <h3>📍 ENCUENTRANOS</h3>
+                <div class="address-card">
+                    <div class="street">Calle Litoral entre Belzu y Pasaje Scouts</div>
+                    <div class="detail" style="color:#ddd;">Ciudad · Cochabamba, Bolivia</div>
+                    <div class="contact-buttons">
+                        <a href="https://maps.app.goo.gl/Ybk95uDLSFQd9vEi9?g_st=ac" target="_blank" class="btn-map">🗺️ Google Maps</a>
+                        <a href="https://wa.me/59176975874?text=Hola%20Audia%20Disco!%20Quisiera%20visitar%20la%20tienda%20en%20Calle%20Litoral%20entre%20Belzu%20y%20Pasaje%20Scouts%2C%20¿cuál%20es%20el%20horario%3F" target="_blank" class="btn-wsp-location">💬 Contactar por WhatsApp</a>
+                    </div>
+                </div>
+                <div class="address-card">
+                    <div class="street">📞 Teléfono / WhatsApp</div>
+                    <div class="detail" style="font-size:22px; font-weight:bold; color:var(--amber);">+591 76975874</div>
+                </div>
+            </div>
+            <div class="map-wrapper">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.133957184471!2d-66.1401373!3d-17.3996506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93e371127d2db0df%3A0xd2974f04a8d1ba1b!2sAUDIA%20DISCO%20JKGOKU!5e0!3m2!1ses!2sbo!4v1742850000000!5m2!1ses!2sbo" width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+        <div class="map-controls">
+            <button id="mapSmallBtn" class="map-size-btn">📉 Pequeño</button>
+            <button id="mapMediumBtn" class="map-size-btn">📏 Mediano</button>
+            <button id="mapLargeBtn" class="map-size-btn">📈 Grande</button>
+        </div>
+    </section>
+
+    <!-- REDES SOCIALES -->
+    <section class="social-section">
+        <div class="social-container">
+            <h2 class="social-title">🎵 <span>SÍGUENOS</span> 🎵</h2>
+            <p class="social-desc">Conecta con nuestra comunidad musical. Reviews, contenido exclusivo, sorteos y todo lo que necesitas saber sobre vinilos y audio.</p>
+            <div class="social-links">
+                <a href="https://www.youtube.com/@AudiaDisco" target="_blank" class="social-link youtube">
+                    <div class="social-icon">▶️</div>
+                    <div class="social-info">
+                        <div class="social-name">YouTube</div>
+                        <div class="social-handle">@AudiaDisco</div>
+                    </div>
+                </a>
+                <a href="https://www.tiktok.com/@audiadisco" target="_blank" class="social-link tiktok">
+                    <div class="social-icon">🎵</div>
+                    <div class="social-info">
+                        <div class="social-name">TikTok</div>
+                        <div class="social-handle">@audiadisco</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FILTROS DE CATÁLOGO -->
+    <div class="filter-section">
+        <div class="filter-inner">
+            <div class="search-wrap">
+                <span style="position:absolute; left:16px; top:50%; transform:translateY(-50%);">🔍</span>
+                <input type="text" class="search-input" id="searchInput" placeholder="Buscar por artista, título, categoría...">
+            </div>
+            <div class="filter-pills filter-collapsible" id="filterPills">
+                <button class="pill active" data-filter="all">Todo</button>
+                <button class="pill" data-filter="vinilo">🎵 Vinilos</button>
+                <button class="pill" data-filter="cd">💿 CDs</button>
+                <button class="pill" data-filter="casette">📼 Casettes</button>
+                <button class="pill" data-filter="tocadisco">🎚️ Tocadiscos</button>
+                <button class="pill" data-filter="parlante">🔊 Parlantes</button>
+                <button class="pill" data-filter="amplificador">⚡ Amplificadores</button>
+                <button class="pill" data-filter="accesorio">🪡 Accesorios</button>
+            </div>
+            <div class="per-page-selector filter-collapsible">
+                <label>📄 Mostrar:</label>
+                <select id="perPageSelect" class="per-page-select">
+                    <option value="8">8</option>
+                    <option value="12">12</option>
+                    <option value="20" selected>20</option>
+                    <option value="24">24</option>
+                    <option value="30">30</option>
+                    <option value="50">50</option>
+                </select>
+            </div>
+            <div class="results-count filter-collapsible" id="resultsCount">0 productos</div>
+            <button class="collapse-filters-btn" id="collapseFiltersBtn" title="Ocultar/Mostrar filtros">←</button>
+        </div>
+    </div>
+
+    <!-- CATÁLOGO PRINCIPAL -->
+    <main class="main">
+        <div class="section-header">
+            <h2>🎶 CATÁLOGO COMPLETO</h2>
+        </div>
+        <div class="products-grid" id="productsGrid"></div>
+        <div class="pagination-container" id="paginationContainer"></div>
+        <div class="pagination-info" id="paginationInfo"></div>
+        <div class="empty-state" id="emptyState" style="display:none">
+            <div>🌀</div>
+            <p>No encontramos ese producto... ¡consúltanos!</p>
+            <a href="https://wa.me/59176975874" class="empty-state-btn">Hablar con Audia</a>
+        </div>
+    </main>
+
+    <!-- INFO STRIP -->
+    <div class="info-strip">
+        <div class="info-strip-inner">
+            <div class="info-item">
+                <div class="info-icon">📍</div>
+                <div>
+                    <div class="info-label">TIENDA FÍSICA</div>
+                    <div class="info-value"><a href="https://maps.google.com/?q=Calle+Litoral+entre+Belzu+y+Pasaje+Scouts+La+Paz+Bolivia" target="_blank">Litoral entre Belzu y Pasaje Scouts</a></div>
+                </div>
+            </div>
+            <div class="info-item">
+                <div class="info-icon">💬</div>
+                <div>
+                    <div class="info-label">WHATSAPP</div>
+                    <div class="info-value"><a href="https://wa.me/59176975874">+591 76975874</a> · Respuesta inmediata</div>
+                </div>
+            </div>
+            <div class="info-item">
+                <div class="info-icon">💳</div>
+                <div>
+                    <div class="info-label">MEDIOS DE PAGO</div>
+                    <div class="info-value">Efectivo, QR, transferencia bancaria</div>
+                </div>
+            </div>
+            <div class="info-item">
+                <div class="info-icon">🔥</div>
+                <div>
+                    <div class="info-label">OFERTAS VIGENTES</div>
+                    <div class="info-value">Hasta 30% OFF en seleccionados</div>
+                </div>
+            </div>
+            <div class="info-item">
+                <div class="info-icon">🎧</div>
+                <div>
+                    <div class="info-label">ESPECIALISTAS</div>
+                    <div class="info-value">Vinilos raros + asesoría técnica</div>
+                </div>
+            </div>
+            <div class="info-item">
+                <div class="info-icon">📧</div>
+                <div>
+                    <div class="info-label">Gmail</div>
+                    <div class="info-value"><a href="mailto:info@audiadisco.com?subject=Consulta%20desde%20web&body=Hola%20Audia%20Disco!">info@audiadisco.com</a> · Respuesta 24h</div>
+                </div>
+            </div>    
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-logo">AUDIA <span>DISCO</span></div>
+        <div class="footer-tagline">"Donde la música cobra vida"</div>
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@AudiaDisco" target="_blank" aria-label="YouTube">▶️</a>
+            <a href="https://www.tiktok.com/@audiadisco" target="_blank" aria-label="TikTok">🎵</a>
+        </div>
+        <hr>
+        <p>© 2026 Audia Disco · Calle Litoral entre Belzu y Pasaje Scouts · <a href="https://wa.me/59176975874">📞 76975874</a></p>
+    </footer>
+
+    <!-- BOTONES FLOTANTES -->
+    <a href="https://wa.me/59176975874" class="wsp-float" target="_blank" aria-label="WhatsApp">💬</a>
+    <div class="scroll-top-btn" id="scrollTopBtn" aria-label="Volver arriba">⬆️</div>
+
+    <!-- MODAL DE PRODUCTO -->
+    <div id="productModal" class="product-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModalBtn" aria-label="Cerrar modal">✕</button>
+            <div class="modal-inner" id="modalInner"></div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
